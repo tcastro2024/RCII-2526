@@ -11,6 +11,7 @@ namespace Aula_1___Apresentacao
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World RCII 2025/2026!");
+            Console.WriteLine("UC - Programação");
             Console.ReadKey();
         }
     }
