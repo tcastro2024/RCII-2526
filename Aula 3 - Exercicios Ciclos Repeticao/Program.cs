@@ -10,7 +10,95 @@ namespace Aula_3___Exercicios_Ciclos_Repeticao
     {
         static void Main(string[] args)
         {
-            //Classificar varias notas utilizando o for
+            //1.Mostre a tabuada de um número.
+            //int numero, resultadoCalculo;
+
+            //Console.WriteLine("Digite o número da tabuada a verificar: ");
+            //numero = int.Parse(Console.ReadLine());
+
+            ////Assume-se que a quantidade é até 10
+            //Console.WriteLine("**** Tabuada do " + numero + " **** ");
+            //for (int i = 1; i <= 10; i++)
+            //{     
+            //    resultadoCalculo = numero * i;
+            //    Console.WriteLine(numero + " x " + i + " = " + resultadoCalculo);
+            //}
+
+            //Console.WriteLine("**** FIM DO PROGRAMA **** ");
+
+            //2.Conte quantas vogais(a, e, i, o, u) existem em uma palavra.
+
+            //string palavra; // sala -> 4 caracteres
+            //int contadorVogais = 0;
+
+            //Console.WriteLine("Digite a palavra a verificar: ");
+            //palavra = Console.ReadLine();
+
+
+            ////palavra.Length = 4 se a palavra for sala ou outra c/4 caracteres
+            ////.Length tambem conta espaços vazios "sa la" -> palavra.Length = 5
+            //for (int i = 0; i < palavra.Length; i++)
+            //{
+            //    //contar vogais
+            //    // 5 vogais
+            //    //Estratégia
+            //    // 5 vogais e temos a palavra "sala"
+            //    // resultado = 2
+
+            //    //se letraDaPalavra == "a"
+            //    // contadorVogais += 1
+            //    // contadorVogais++
+            //    // contadorVogais = 0
+            //    // contadorVogais = contadorVogais + 1 <- utilizada
+            //    // 0 = 0 + 1;
+            //    // 1 | contadorVogais = 1
+            //    // contadorVogais = contadorVogais + 1 <- utilizada
+            //    // 1 = 1 + 1;
+            //    // contadorVogais = 2
+            //    //
+            //    //se letraDaPalavra == "e"
+            //    //se letraDaPalavra == "i"
+            //    //se letraDaPalavra == "o"
+            //    //se letraDaPalavra == "u"
+            //    //
+            //    //
+
+            //    // palavra[i] = Corresponde a uma posição de um texto inserido
+            //    // palavra[0] = Corresponde a 1º posição de um texto inserido
+            //    // palavra[1] = Corresponde a 2º posição de um texto inserido
+            //    // palavra[2] = Corresponde a 3º posição de um texto inserido
+            //    // ...
+            //    if (palavra[i].ToString() == "a")
+            //    {
+            //        contadorVogais = contadorVogais + 1;
+            //    }
+            //    else if (palavra[i].ToString() == "e")
+            //    {
+            //        contadorVogais = contadorVogais + 1;
+            //    }
+            //    else if (palavra[i].ToString() == "i")
+            //    {
+            //        contadorVogais = contadorVogais + 1;
+            //    }
+            //    else if (palavra[i].ToString() == "o")
+            //    {
+            //        contadorVogais = contadorVogais + 1;
+            //    }
+            //    else if (palavra[i].ToString() == "u")
+            //    {
+            //        contadorVogais = contadorVogais + 1;
+            //    }
+            //}
+
+            ////if (palavra[i] == "u")
+
+            //Console.WriteLine("Quantidade de vogais " +
+            //    "da palavra '" + palavra + "' são: " + contadorVogais );
+
+
+
+
+            //EXERCICIO 3: Classificar varias notas utilizando o for
             //Exemplo: nota > 15 ("Bom"), nota >= 9.5 ("suficiente"),
             // nota < 9.5 ("insuficiente")
 
@@ -43,6 +131,7 @@ namespace Aula_3___Exercicios_Ciclos_Repeticao
             //    }
             //}
 
+            //EXERCICIO 3.1 
             // Para quem já fez
             // areas ( area > 100 m2 = muito grande), 
             // areas ( area > 50 m2 = grande), 
@@ -81,6 +170,35 @@ namespace Aula_3___Exercicios_Ciclos_Repeticao
             //    }
             //}
 
+            //4. Leia o número de golos marcados por uma equipa de futebol em um numero
+            // desconhecido de jogos e no final mostre a média de golos por jogo(while).
+
+            int numGolos = 0, somaGolos = 0, contadorDeJogos = 0;
+            double media = 0.0;
+
+            //numGolos = 0
+            // 0 != 1  -> verdade
+            while (numGolos != -1)
+            {
+                Console.WriteLine("Numero de golos do jogo " + (contadorDeJogos + 1) + "" +
+                    " ou digite -1 para terminar o programa: ");
+                numGolos = int.Parse(Console.ReadLine());
+
+                if (numGolos == -1)
+                {
+                    break;
+                }
+
+                somaGolos = somaGolos + numGolos;
+                contadorDeJogos = contadorDeJogos + 1;
+            }
+
+            media = somaGolos / contadorDeJogos;
+
+            Console.WriteLine("Media de golos por jogo: " +  media);
+
+
+            //
         }
     }
 }
