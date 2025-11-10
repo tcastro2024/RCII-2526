@@ -198,7 +198,8 @@ namespace Aula_3___Exercicios_Ciclos_Repeticao
             Console.WriteLine("Media de golos por jogo: " +  media);
 
 
-            //
+            // Contar carros que entraram num parque de estacionamento
+            // Contar alunos que entraram no ipca
         }
     }
 }
