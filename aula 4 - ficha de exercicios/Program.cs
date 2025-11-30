@@ -216,6 +216,13 @@ namespace aula_4___ficha_de_exercicios
 
             #endregion
 
+            int[] scores = { 1, 2, 3, 4, 5 };
+            //scores[0]; == 1
+            //0 É O MESMO QUE A 1º POSIÇÃO DO ARRAY OU SEJA 
+            // scores[0] = 1
+            scores[0] = 29;
+
+
         }
 
         //Metodo MEDIA DA UC PROGRAMACAO
