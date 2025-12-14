@@ -232,38 +232,113 @@ namespace aula_5___vetores_e_arrays
             //de N pessoas. Armazene as N alturas em um vetor. Em seguida,
             //mostrar a altura média dessas pessoas.
 
-            double somaAlturas = 0.0, media;
-            double[] vetorDeAlturas;
-            int qtdAlturas;
+            //double somaAlturas = 0.0, media;
+            //double[] vetorDeAlturas;
+            //int qtdAlturas;
 
-            Console.WriteLine("Quatidade de alturas a verificar: ");
-            qtdAlturas = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Quatidade de alturas a verificar: ");
+            //qtdAlturas = int.Parse(Console.ReadLine());
 
-            //Colocar um tamanho no vetor
-            vetorDeAlturas = new double[qtdAlturas];
+            ////Colocar um tamanho no vetor
+            //vetorDeAlturas = new double[qtdAlturas];
 
-            //Guardar as alturas digitadas pelo utilizador
-            //no vetor
-            for (int i = 0; i < vetorDeAlturas.Length; i++)
+            ////Guardar as alturas digitadas pelo utilizador
+            ////no vetor
+            //for (int i = 0; i < vetorDeAlturas.Length; i++)
+            //{
+            //    Console.WriteLine("Digite a " + (i + 1) + " altura: ");
+            //    vetorDeAlturas[i] = double.Parse(Console.ReadLine());
+
+            //    //Pode-se utilizar a soma aqui em vez de criar novo for
+            //    //somaAlturas = somaAlturas + vetorDeAlturas[i];
+            //}
+
+            ////Somar os valores colocados no vetor
+            //for (int i = 0; i < vetorDeAlturas.Length; i++)
+            //{
+            //    somaAlturas = somaAlturas + vetorDeAlturas[i];
+            //    // ou
+            //    //  somaAlturas += vetorDeAlturas[i];
+            //}
+
+            //media = somaAlturas / qtdAlturas;
+
+            //Console.WriteLine("Media de alturas: " + Math.Round(media, 2));
+
+
+            #region EXERCICIOS COM VETORES
+
+            //1.Considerar o vetor: string[] palavras = {“M”,”-“,”5”};
+            //Implementar um procedimento que permita listar os elementos da tabela de carateres.
+
+            //string[] palavras = { "M", "-", "5" };
+
+            //for(int i = 0; i < palavras.Length;i++)
+            //{
+            //    Console.WriteLine(palavras[i]);
+            //}
+
+            /*2.Considerar o vetor: int[10] Inteiros = { 10, 23, 12, -4, 9, -67, 24, 1, 90, 100 };
+            Pretende - se que se verifique para cada elemento constituinte da tabela se estes são número par.
+            */
+            int[] Inteiros = { 10, 23, 12, -4, 9, -67, 24, 1, 90, 100 };
+
+            for (int i = 0; i < Inteiros.Length; i++)
             {
-                Console.WriteLine("Digite a " + (i + 1) + " altura: ");
-                vetorDeAlturas[i] = double.Parse(Console.ReadLine());
-
-                //Pode-se utilizar a soma aqui em vez de criar novo for
-                //somaAlturas = somaAlturas + vetorDeAlturas[i];
+                if (Inteiros[i] % 2 == 0)
+                {
+                    Console.WriteLine(Inteiros[i] + " é par.");
+                }
+                //else
+                //{
+                //    Console.WriteLine(Inteiros[i] + " é ímpar.");
+                //}
             }
 
-            //Somar os valores colocados no vetor
-            for (int i = 0; i < vetorDeAlturas.Length; i++)
+            /*
+            3.Considerar o vetor: double[5] Reais = { 10.4, 23.2, 12.34, -4.67, 9.09 };
+            Pretende - se que se verifique para cada elemento constituinte da tabela quais destes são números
+            negativos.
+            Implementar num procedimento o código que permite responder ao pedido.
+            */
+            double[] Reais = { 10.4, 23.2, 12.34, -4.67, 9.09 };
+
+            for (int i = 0; i < Reais.Length; i++)
             {
-                somaAlturas = somaAlturas + vetorDeAlturas[i];
-                // ou
-                //  somaAlturas += vetorDeAlturas[i];
+                if (Reais[i] < 0)
+                {
+                    Console.WriteLine(Reais[i] + " é negativo.");
+                }
+                //else
+                //{
+                //    Console.WriteLine(Reais[i] + " é positivo.");
+                //}
             }
 
-            media = somaAlturas / qtdAlturas;
+            /*
+             * 4. Pretende-se que se implemente dois procedimentos que permitam ler e listar o
+                conteúdo de um vetor de inteiros. Definir o tamanho máximo para 20 numa constante
+                com a designação N.
+            */
 
-            Console.WriteLine("Media de alturas: " + Math.Round(media, 2));
+            const int N = 20;
+            int[] vetorInteiros = new int[N];
+
+            //Leitura
+            for (int i = 0; i < vetorInteiros.Length; i++)
+            {
+                Console.WriteLine("Digite o " + (i + 1) + "º número inteiro: ");
+                vetorInteiros[i] = int.Parse(Console.ReadLine());
+            }
+
+            //Listagem  
+            Console.WriteLine("Números inteiros digitados: ");
+            for (int i = 0; i < vetorInteiros.Length; i++)
+            {
+                Console.WriteLine(vetorInteiros[i]);
+            }
+
+            #endregion
 
         }
     }
